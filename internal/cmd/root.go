@@ -1,12 +1,14 @@
 package cmd
 
 import (
-	"fmt"
+	"parking-app-owner/internal/api"
+	"parking-app-owner/internal/data"
 )
 
 func execute() {
 	db := prepareDB()
-	if db != nil {
-		fmt.Println("success!")
+	app := api.App{
+		ParkingRepo: data.NewRepo(db),
 	}
+	app.Serve()
 }

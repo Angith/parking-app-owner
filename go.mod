@@ -2,4 +2,7 @@ module parking-app-owner
 
 go 1.12
 
-require github.com/google/logger v1.0.1
+require (
+	github.com/go-chi/chi v4.0.2+incompatible
+	github.com/google/logger v1.0.1
+)
